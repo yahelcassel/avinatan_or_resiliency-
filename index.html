@@ -1,0 +1,2638 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3efe5">
+  <meta name="description" content="מסע עדות וחוסן בעקבות סיפורו של אבינתן אור — מתוך הספר ״מבעד לאדמה״ והריאיון ב״עובדה״.">
+  <title>אבינתן אור · מבעד לאדמה — מסע עדות וכוחות נפש</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2325392e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23d8b778' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      color-scheme: light;
+      --font-sans: "Heebo", "Segoe UI", Arial, sans-serif;
+      --font-serif: "Frank Ruhl Libre", "David Libre", Georgia, serif;
+
+      --paper: #f3efe5;
+      --paper-deep: #eae4d6;
+      --surface: #fcfaf4;
+      --surface-elevated: #ffffff;
+      --parchment: #f9f5eb;
+
+      --ink: #1e2822;
+      --ink-soft: #37433b;
+      --muted: #566259;
+      --line: #d9d2c3;
+      --line-strong: #c2b9a6;
+
+      --olive: #35503f;
+      --olive-deep: #213529;
+      --olive-mid: #2b4435;
+      --olive-wash: #e6ece4;
+      --olive-tint: #eef2ec;
+
+      --clay: #8c4b34;
+      --clay-deep: #6e3824;
+      --clay-wash: #f6e9e2;
+      --clay-border: #dfc3b5;
+
+      --slate: #294957;
+      --slate-deep: #1d3642;
+      --slate-wash: #e5eff2;
+      --slate-border: #bdd2d9;
+
+      --gold: #b88d44;
+      --gold-light: #e2c68d;
+      --gold-wash: #f7efe0;
+
+      --focus: #1f5c78;
+      --radius-sm: 0.55rem;
+      --radius-md: 0.9rem;
+      --radius-lg: 1.35rem;
+      --radius-xl: 1.65rem;
+
+      --shadow-sm: 0 2px 10px rgba(33, 53, 41, 0.04);
+      --shadow-md: 0 12px 32px rgba(33, 53, 41, 0.07), 0 2px 6px rgba(33, 53, 41, 0.03);
+      --shadow-lg: 0 20px 50px rgba(33, 53, 41, 0.10), 0 4px 12px rgba(33, 53, 41, 0.04);
+
+      --quote-size: 1.13rem;
+      --body-scale: 1;
+    }
+
+    html[data-font-scale="large"] {
+      --quote-size: 1.3rem;
+      --body-scale: 1.09;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-block-start: 5.75rem;
+      font-family: var(--font-sans);
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image:
+        radial-gradient(circle at 88% 6%, rgba(184, 141, 68, 0.09), transparent 34%),
+        radial-gradient(circle at 12% 18%, rgba(53, 80, 63, 0.07), transparent 40%);
+      color: var(--ink);
+      font-size: calc(1rem * var(--body-scale));
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, p, blockquote, ol, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    button, textarea, input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .skip-link {
+      position: fixed;
+      inset-block-start: 0.6rem;
+      inset-inline-start: 1rem;
+      z-index: 100;
+      transform: translateY(-160%);
+      padding: 0.65rem 1.1rem;
+      border-radius: var(--radius-sm);
+      background: var(--olive-deep);
+      color: var(--surface);
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    /* Scroll Progress Bar */
+    .scroll-progress {
+      position: fixed;
+      inset-block-start: 0;
+      inset-inline: 0;
+      z-index: 60;
+      height: 3px;
+      background: rgba(33, 53, 41, 0.08);
+      pointer-events: none;
+    }
+
+    .scroll-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--olive), var(--gold), var(--clay));
+      transition: width 90ms linear;
+    }
+
+    .container {
+      width: min(100% - 2.75rem, 72rem);
+      margin-inline: auto;
+    }
+
+    /* Sticky Topbar */
+    .topbar {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 50;
+      border-block-end: 1px solid rgba(194, 185, 166, 0.72);
+      background: rgba(243, 239, 229, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.25rem;
+      min-height: 4.35rem;
+      padding-block: 0.45rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--olive-deep);
+      text-decoration: none;
+    }
+
+    .brand-emblem {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--olive-deep);
+      color: var(--gold-light);
+      box-shadow: inset 0 0 0 1px rgba(226, 198, 141, 0.35);
+      flex-shrink: 0;
+    }
+
+    .brand-emblem::after {
+      width: 0.72rem;
+      height: 0.72rem;
+      border: 1.5px solid currentColor;
+      border-radius: 50%;
+      content: "";
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.18;
+    }
+
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.02rem;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .topnav a {
+      padding: 0.42rem 0.78rem;
+      border-radius: 2rem;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .topnav a:hover {
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+    }
+
+    .topbar-tools {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.48rem;
+      min-height: 2.65rem;
+      padding: 0.52rem 1.1rem;
+      border: 1px solid transparent;
+      border-radius: 0.65rem;
+      background: var(--olive-deep);
+      color: var(--surface);
+      font-weight: 700;
+      font-size: 0.94rem;
+      line-height: 1.3;
+      text-decoration: none;
+      transition: background-color 160ms ease, border-color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+    }
+
+    .btn:hover {
+      background: var(--olive);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-secondary {
+      border-color: var(--line-strong);
+      background: var(--surface);
+      color: var(--olive-deep);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--olive);
+      background: var(--olive-wash);
+    }
+
+    .btn-ghost {
+      border-color: rgba(53, 80, 63, 0.26);
+      background: transparent;
+      color: var(--olive-deep);
+    }
+
+    .btn-ghost:hover {
+      background: var(--olive-wash);
+    }
+
+    .btn-sm {
+      min-height: 2.25rem;
+      padding: 0.36rem 0.78rem;
+      font-size: 0.85rem;
+      border-radius: 0.55rem;
+    }
+
+    .btn-font[aria-pressed="true"] {
+      background: var(--olive-deep);
+      border-color: var(--olive-deep);
+      color: var(--surface);
+    }
+
+    /* Timer */
+    .timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .time-readout {
+      padding: 0.26rem 0.6rem;
+      border-radius: 0.45rem;
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+      font-size: 0.9rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .timer[data-state="done"] .time-readout {
+      background: var(--clay-wash);
+      color: var(--clay-deep);
+    }
+
+    .timer-reset {
+      padding: 0.25rem 0.35rem;
+      border: 0;
+      background: none;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .timer-reset:hover {
+      color: var(--olive-deep);
+    }
+
+    .clock-dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .timer[data-state="running"] .clock-dot {
+      background: #2f8f5b;
+      box-shadow: 0 0 0 3px rgba(47, 143, 91, 0.22);
+    }
+
+    /* Zoom Share Sound Reminder Banner */
+    .sound-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      margin-block: 1.15rem 1.1rem;
+      padding: 0.78rem 1.1rem;
+      border: 1px solid #c9d5c5;
+      border-inline-start: 4px solid var(--olive);
+      border-radius: var(--radius-md);
+      background: linear-gradient(90deg, var(--olive-tint), var(--surface));
+      color: var(--olive-deep);
+      font-size: 0.93rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sound-banner-content {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .sound-icon {
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+      flex-shrink: 0;
+    }
+
+    .sound-setting {
+      display: inline-block;
+      padding: 0.05rem 0.42rem;
+      border-radius: 0.3rem;
+      background: var(--olive-wash);
+      font-weight: 700;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-main {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(1.65rem, 3.6vw, 3rem) clamp(1.65rem, 4vw, 3.25rem);
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(230, 236, 228, 0.85), transparent 65%),
+        radial-gradient(ellipse at 0% 100%, rgba(247, 239, 224, 0.7), transparent 60%),
+        var(--surface);
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      align-self: flex-start;
+      padding: 0.28rem 0.78rem;
+      border: 1px solid rgba(53, 80, 63, 0.2);
+      border-radius: 2rem;
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .hero-kicker-dot {
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 50%;
+      background: var(--clay);
+    }
+
+    .hero h1 {
+      margin-block: 0.75rem 0.35rem;
+      font-family: var(--font-serif);
+      font-size: clamp(2.85rem, 5.8vw, 4.55rem);
+      font-weight: 900;
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      color: var(--olive-deep);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2.3vw, 1.68rem);
+      font-weight: 700;
+      line-height: 1.32;
+      color: var(--clay);
+    }
+
+    .hero-lead {
+      max-width: 52ch;
+      margin-block: 0.95rem 1.35rem;
+      color: var(--ink-soft);
+      font-size: 1.03rem;
+      line-height: 1.72;
+    }
+
+    .hero-quote-strip {
+      margin-block-end: 1.5rem;
+      padding: 0.85rem 1.05rem;
+      border-inline-start: 3px solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      background: var(--parchment);
+      font-family: var(--font-serif);
+      font-size: 1.06rem;
+      line-height: 1.6;
+      color: var(--olive-deep);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-block-end: 1.5rem;
+      list-style: none;
+    }
+
+    .hero-stats li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.38rem;
+      padding: 0.32rem 0.72rem;
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      background: var(--surface-elevated);
+      color: var(--ink-soft);
+      font-size: 0.87rem;
+      font-weight: 600;
+    }
+
+    .hero-stats strong {
+      color: var(--olive-deep);
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    /* Hero Station Map Sidebar */
+    .hero-map {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(1.35rem, 2.8vw, 2.15rem);
+      border-inline-start: 1px solid var(--line);
+      background: linear-gradient(180deg, #23382c 0%, #1b2c22 100%);
+      color: var(--surface);
+    }
+
+    .hero-map-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding-block-end: 0.75rem;
+      border-block-end: 1px solid rgba(255, 255, 255, 0.13);
+      margin-block-end: 0.65rem;
+    }
+
+    .hero-map-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--gold-light);
+    }
+
+    .hero-map-progress {
+      font-size: 0.8rem;
+      color: rgba(252, 250, 244, 0.75);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .station-nav-list {
+      list-style: none;
+      display: grid;
+      gap: 0.16rem;
+    }
+
+    .station-nav-link {
+      display: grid;
+      grid-template-columns: 1.6rem 1.2rem minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 0.38rem;
+      padding: 0.31rem 0.52rem;
+      border-radius: 0.45rem;
+      color: rgba(252, 250, 244, 0.9);
+      font-size: 0.845rem;
+      text-decoration: none;
+      transition: background-color 140ms ease, color 140ms ease;
+    }
+
+    .station-nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .station-nav-num {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--gold-light);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .station-nav-icon {
+      font-size: 0.84rem;
+      line-height: 1;
+    }
+
+    .station-nav-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+
+    .station-nav-check {
+      width: 0.48rem;
+      height: 0.48rem;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: background-color 180ms ease, border-color 180ms ease;
+    }
+
+    .station-nav-link[data-visited="true"] .station-nav-check {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* Collapsible Workshop Guide */
+    details > summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details > summary::marker {
+      content: "";
+    }
+
+    .guide-panel {
+      margin-block: 1.35rem 2.35rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .guide-panel > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.95rem 1.35rem;
+      color: var(--olive-deep);
+      transition: background-color 150ms ease;
+    }
+
+    .guide-panel > summary:hover {
+      background: var(--parchment);
+    }
+
+    .guide-summary-text {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.85rem;
+    }
+
+    .guide-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .guide-hint {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .chevron {
+      width: 0.52rem;
+      height: 0.52rem;
+      flex-shrink: 0;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      transition: transform 200ms ease;
+    }
+
+    details[open] > summary .chevron {
+      transform: translateY(2px) rotate(225deg);
+    }
+
+    .guide-body {
+      padding: 0.2rem 1.35rem 1.3rem;
+      border-block-start: 1px solid var(--line);
+      background: var(--parchment);
+    }
+
+    .guide-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-block-start: 0.95rem;
+      list-style: none;
+    }
+
+    .guide-steps li {
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+
+    .guide-step-badge {
+      display: inline-block;
+      margin-block-end: 0.3rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 0.3rem;
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .guide-steps strong {
+      display: block;
+      color: var(--olive-deep);
+      margin-block-end: 0.2rem;
+    }
+
+    .guide-steps p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .care-note {
+      margin-block-start: 0.85rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* Timeline Section Header & Controls */
+    .timeline-section {
+      margin-block-end: 3.2rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.5rem;
+      margin-block-end: 1.15rem;
+    }
+
+    .section-eyebrow {
+      color: var(--clay);
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3.6vw, 2.5rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--olive-deep);
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      margin-block-end: 1.65rem;
+      padding: 0.7rem 0.95rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.38rem;
+      min-height: 2.3rem;
+      padding: 0.34rem 0.9rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 2rem;
+      background: transparent;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 150ms ease;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--olive);
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+    }
+
+    .filter-pill[aria-pressed="true"] {
+      border-color: var(--olive-deep);
+      background: var(--olive-deep);
+      color: var(--surface);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    /* Timeline Spine & Cards */
+    .timeline-track {
+      position: relative;
+      display: grid;
+      gap: 1.15rem;
+      padding-inline-start: clamp(2.4rem, 5vw, 3.6rem);
+    }
+
+    .timeline-track::before {
+      position: absolute;
+      inset-block: 1.2rem 1.2rem;
+      inset-inline-start: clamp(0.95rem, 2vw, 1.35rem);
+      width: 2px;
+      background: linear-gradient(
+        180deg,
+        var(--olive) 0%,
+        var(--line-strong) 20%,
+        var(--line-strong) 80%,
+        var(--gold) 100%
+      );
+      content: "";
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      inset-block-start: 1.15rem;
+      inset-inline-start: calc(-1 * clamp(2.4rem, 5vw, 3.6rem) + clamp(0.95rem, 2vw, 1.35rem) - 0.95rem + 1px);
+      display: grid;
+      place-items: center;
+      width: 1.9rem;
+      height: 1.9rem;
+      border: 2px solid var(--line-strong);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--olive-deep);
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      box-shadow: 0 0 0 4px var(--paper);
+      transition: all 180ms ease;
+      z-index: 2;
+    }
+
+    .timeline-item[data-kind="video"] .timeline-marker {
+      border-color: var(--slate);
+      color: var(--slate-deep);
+    }
+
+    .timeline-item[data-kind="book"] .timeline-marker {
+      border-color: var(--clay);
+      color: var(--clay-deep);
+    }
+
+    .timeline-item:has(.station-card[open]) .timeline-marker {
+      background: var(--olive-deep);
+      border-color: var(--olive-deep);
+      color: var(--gold-light);
+      transform: scale(1.08);
+    }
+
+    .station-card {
+      --card-accent: var(--clay);
+      --card-wash: var(--clay-wash);
+      --card-border-accent: var(--clay-border);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-inline-start: 4px solid var(--card-accent);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 200ms ease, border-color 200ms ease, transform 180ms ease;
+    }
+
+    .station-card[data-kind="video"] {
+      --card-accent: var(--slate);
+      --card-wash: var(--slate-wash);
+      --card-border-accent: var(--slate-border);
+    }
+
+    .station-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--line-strong);
+      border-inline-start-color: var(--card-accent);
+    }
+
+    .station-card[open] {
+      box-shadow: var(--shadow-md);
+      background: var(--surface-elevated);
+    }
+
+    .station-card > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.08rem 1.35rem;
+      transition: background-color 150ms ease;
+    }
+
+    .station-card > summary:hover {
+      background: rgba(249, 245, 235, 0.72);
+    }
+
+    .card-header-main {
+      display: grid;
+      gap: 0.34rem;
+      min-width: 0;
+    }
+
+    .card-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.55rem;
+      font-size: 0.83rem;
+    }
+
+    .badge-media {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.14rem 0.58rem;
+      border-radius: 0.38rem;
+      background: var(--card-wash);
+      color: var(--card-accent);
+      font-weight: 800;
+    }
+
+    .badge-when {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .badge-theme {
+      padding: 0.1rem 0.52rem;
+      border: 1px solid var(--line);
+      border-radius: 2rem;
+      background: var(--parchment);
+      color: var(--ink-soft);
+      font-size: 0.79rem;
+      font-weight: 600;
+    }
+
+    .badge-duration {
+      padding: 0.1rem 0.48rem;
+      border-radius: 0.35rem;
+      background: var(--paper);
+      color: var(--card-accent);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2.1vw, 1.42rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    .card-context {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      max-width: 68ch;
+    }
+
+    .card-toggle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      padding: 0.38rem 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 2rem;
+      background: var(--parchment);
+      color: var(--card-accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .station-card[open] .card-toggle-label::before {
+      content: "סגירה";
+    }
+
+    .station-card:not([open]) .card-toggle-label::before {
+      content: "פתיחה";
+    }
+
+    .card-body {
+      padding: 1.25rem 1.45rem 1.4rem;
+      border-block-start: 1px solid var(--line);
+      animation: cardReveal 220ms ease-out;
+    }
+
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Literary Book Excerpt Styling */
+    .book-sheet {
+      position: relative;
+      max-width: 66ch;
+      padding: clamp(1.2rem, 3vw, 1.85rem) clamp(1.25rem, 3.2vw, 2.15rem);
+      border: 1px solid var(--clay-border);
+      border-inline-start: 4px solid var(--clay);
+      border-radius: var(--radius-md);
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(246, 233, 226, 0.55), transparent 65%),
+        var(--parchment);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .book-sheet::before {
+      position: absolute;
+      inset-block-start: 0.45rem;
+      inset-inline-end: 1.1rem;
+      font-family: var(--font-serif);
+      font-size: 3.6rem;
+      line-height: 1;
+      color: rgba(140, 75, 52, 0.14);
+      content: "״";
+      pointer-events: none;
+    }
+
+    .book-quote {
+      font-family: var(--font-serif);
+      font-size: var(--quote-size);
+      line-height: 1.92;
+      color: var(--ink);
+    }
+
+    .book-quote p + p {
+      margin-block-start: 0.92rem;
+    }
+
+    .book-pullquote {
+      margin-block-start: 1.15rem;
+      padding-block-start: 0.85rem;
+      border-block-start: 1px dashed var(--clay-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.86rem;
+      color: var(--clay-deep);
+      font-weight: 700;
+    }
+
+    /* Video Player Styling */
+    .video-stage {
+      max-width: 50rem;
+    }
+
+    .player-frame {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #1a2a33 0%, #263c47 100%);
+      box-shadow: var(--shadow-md);
+    }
+
+    .player-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .spinner {
+      width: 1.75rem;
+      height: 1.75rem;
+      border: 2.5px solid rgba(255, 255, 255, 0.22);
+      border-block-start-color: var(--gold-light);
+      border-radius: 50%;
+      animation: spin 0.85s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .player-frame iframe {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      margin-block-start: 0.85rem;
+    }
+
+    .video-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.55rem 1rem;
+    }
+
+    .yt-backup {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.22em;
+    }
+
+    .yt-backup:hover {
+      color: var(--slate-deep);
+    }
+
+    .card-footer-nav {
+      margin-block-start: 1rem;
+      padding-block-start: 0.8rem;
+      border-block-start: 1px solid var(--line);
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .next-station-btn {
+      padding: 0.34rem 0.8rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 2rem;
+      background: var(--surface);
+      color: var(--olive-deep);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transition: background-color 150ms ease;
+    }
+
+    .next-station-btn:hover {
+      background: var(--olive-wash);
+    }
+
+    /* Reflection & Discussion Questions Section */
+    .questions-section {
+      margin-block-end: 2.6rem;
+      padding: clamp(1.5rem, 3.5vw, 2.5rem);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse at 0% 0%, rgba(230, 236, 228, 0.65), transparent 60%),
+        var(--surface);
+      box-shadow: var(--shadow-md);
+    }
+
+    .questions-intro {
+      max-width: 64ch;
+      margin-block: 0.55rem 1.55rem;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .question-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.25rem 1.35rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--parchment);
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .question-card.is-core {
+      border-color: #b7c8b8;
+      border-block-start: 3px solid var(--olive);
+      background: linear-gradient(180deg, var(--olive-tint) 0%, var(--surface) 100%);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .question-card.is-wide {
+      grid-column: 1 / -1;
+    }
+
+    .question-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .question-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 50%;
+      background: var(--olive-deep);
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .question-tag {
+      padding: 0.12rem 0.58rem;
+      border-radius: 2rem;
+      background: var(--olive-wash);
+      color: var(--olive-deep);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .question-card:not(.is-core) .question-tag {
+      background: var(--gold-wash);
+      color: var(--clay-deep);
+    }
+
+    .question-title {
+      font-family: var(--font-serif);
+      font-size: 1.22rem;
+      font-weight: 700;
+      line-height: 1.42;
+      color: var(--olive-deep);
+    }
+
+    .question-sub {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.58;
+    }
+
+    /* Plenary & Personal Summary Pad */
+    .plenary-section {
+      padding: clamp(1.5rem, 3.8vw, 2.75rem);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(184, 141, 68, 0.16), transparent 55%),
+        linear-gradient(165deg, #23392c 0%, #192920 100%);
+      color: var(--surface);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .plenary-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+      font-weight: 900;
+      line-height: 1.18;
+      color: #ffffff;
+    }
+
+    .plenary-intro {
+      max-width: 66ch;
+      margin-block: 0.5rem 1.25rem;
+      color: rgba(252, 250, 244, 0.84);
+    }
+
+    .traits-bank {
+      margin-block-end: 1.35rem;
+      padding: 0.9rem 1.05rem;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .traits-bank-label {
+      display: block;
+      margin-block-end: 0.55rem;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .traits-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .trait-chip {
+      padding: 0.28rem 0.72rem;
+      border: 1px solid rgba(226, 198, 141, 0.35);
+      border-radius: 2rem;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--surface);
+      font-size: 0.84rem;
+      font-weight: 600;
+      transition: all 140ms ease;
+    }
+
+    .trait-chip:hover {
+      background: rgba(226, 198, 141, 0.2);
+      border-color: var(--gold-light);
+    }
+
+    .trait-chip[data-selected="true"] {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      color: var(--olive-deep);
+      font-weight: 800;
+    }
+
+    .fields-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.95rem;
+    }
+
+    .field-label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #f6f3ea;
+    }
+
+    .field-label textarea,
+    .manual-copy {
+      width: 100%;
+      min-height: 8.5rem;
+      resize: vertical;
+      padding: 0.75rem 0.88rem;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 400;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .field-label textarea::placeholder {
+      color: #677368;
+      opacity: 1;
+    }
+
+    .plenary-section :focus-visible {
+      outline-color: var(--gold-light);
+    }
+
+    .plenary-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      margin-block-start: 1.2rem;
+    }
+
+    .plenary-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .btn-gold {
+      background: var(--gold-light);
+      color: var(--olive-deep);
+      font-weight: 800;
+    }
+
+    .btn-gold:hover {
+      background: #ebd3a3;
+    }
+
+    .btn-outline-light {
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--surface);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .copy-feedback {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .storage-note {
+      margin-block-start: 0.75rem;
+      color: rgba(252, 250, 244, 0.68);
+      font-size: 0.84rem;
+    }
+
+    .manual-copy {
+      margin-block-start: 0.85rem;
+    }
+
+    .clipboard-helper {
+      position: fixed;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Footer */
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      padding-block: 1.6rem 2.2rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .back-to-top {
+      font-weight: 700;
+      color: var(--olive-deep);
+      text-decoration: none;
+    }
+
+    .back-to-top:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 60rem) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-map {
+        border-inline-start: 0;
+        border-block-start: 1px solid var(--line);
+      }
+
+      .station-nav-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .guide-steps,
+      .fields-grid,
+      .questions-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .topnav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 40rem) {
+      .container {
+        width: calc(100% - 1.5rem);
+      }
+
+      .topbar-inner {
+        gap: 0.45rem;
+      }
+
+      .brand-sub {
+        display: none;
+      }
+
+      .sound-banner {
+        padding: 0.7rem 0.85rem;
+        font-size: 0.88rem;
+      }
+
+      .sound-setting {
+        white-space: normal;
+      }
+
+      .hero-main,
+      .hero-map {
+        padding: 1.25rem 1.15rem;
+      }
+
+      .station-nav-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .timeline-track {
+        padding-inline-start: 2.05rem;
+      }
+
+      .timeline-track::before {
+        inset-inline-start: 0.72rem;
+      }
+
+      .timeline-marker {
+        inset-inline-start: calc(-2.05rem + 0.72rem - 0.82rem + 1px);
+        width: 1.65rem;
+        height: 1.65rem;
+        font-size: 0.72rem;
+      }
+
+      .station-card > summary {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.95rem 1rem;
+      }
+
+      .card-toggle-pill {
+        align-self: flex-end;
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+
+      .book-sheet {
+        padding: 1.05rem 1.1rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .topbar,
+      .scroll-progress,
+      .sound-banner,
+      .toolbar,
+      .video-actions,
+      .card-footer-nav,
+      .card-toggle-pill,
+      .plenary-buttons {
+        display: none !important;
+      }
+
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .hero,
+      .questions-section,
+      .station-card {
+        box-shadow: none;
+        border-color: #cccccc;
+      }
+
+      .plenary-section {
+        background: #f7f7f7;
+        color: #000000;
+        border: 1px solid #cccccc;
+      }
+
+      .plenary-section h2,
+      .plenary-intro,
+      .field-label {
+        color: #000000;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <a class="skip-link" href="#main">דילוג לתוכן הראשי</a>
+
+  <header class="topbar" id="top">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-emblem" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">אבינתן אור · מבעד לאדמה</span>
+          <span class="brand-sub">מסע עדות, בחירה וכוחות נפש</span>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="ניווט מהיר בדף">
+        <a href="#journey">13 התחנות</a>
+        <a href="#questions">שאלות לדיון</a>
+        <a href="#plenary">סיכום ותובנות</a>
+      </nav>
+
+      <div class="topbar-tools">
+        <button class="btn btn-ghost btn-sm btn-font" id="font-toggle" type="button" aria-pressed="false" title="הגדלת טקסט לקריאה משותפת בשיתוף מסך">
+          א+ תצוגת קריאה מוגדלת
+        </button>
+
+        <div class="timer" id="timer" data-state="idle">
+          <span class="time-readout" id="timer-readout" role="timer" aria-label="הזמן שנותר" dir="ltr" hidden>18:00</span>
+          <button class="btn btn-secondary btn-sm" id="timer-toggle" type="button">
+            <span class="clock-dot" aria-hidden="true"></span>
+            <span id="timer-label">טיימר 18 דק׳</span>
+          </button>
+          <button class="timer-reset" id="timer-reset" type="button" hidden>איפוס</button>
+          <span class="sr-only" id="timer-status" role="status"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <aside class="sound-banner" aria-label="תזכורת לשיתוף שמע בזום">
+      <div class="sound-banner-content">
+        <span class="sound-icon" aria-hidden="true">🔊</span>
+        <p>
+          <strong>למשתף/ת המסך בזום:</strong>
+          לפני הפעלת קטעי הווידאו, חשוב לסמן <bdi dir="ltr">✓</bdi> על
+          <span class="sound-setting">שתף שמע · <bdi dir="ltr">Share Sound</bdi></span>
+          בחלון שיתוף המסך.
+        </p>
+      </div>
+    </aside>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-main">
+        <div>
+          <p class="hero-kicker">
+            <span class="hero-kicker-dot" aria-hidden="true"></span>
+            <span>סדנת עומק · חוסן וכוחות נפש במבחן הקיצון</span>
+          </p>
+          <h1 id="page-title">אבינתן אור</h1>
+          <p class="hero-subtitle">מבעד לאדמה — חירות הרוח במרחב המצומצם ביותר</p>
+          <p class="hero-lead">
+            שלוש־עשרה תחנות ערוכות מתוך ספרו של אבינתן אור <strong>״מבעד לאדמה״</strong> ומתוך הריאיון המיוחד ב<strong>״עובדה״</strong>:
+            מסע ממעמקי הבידוד והמנהרה אל שורשי הבית, כיבוד ההורים, המשמעת העצמית, התושייה וזכות הבחירה הפנימית.
+          </p>
+          <blockquote class="hero-quote-strip">
+            ״לא משנה כמה מצמצמים לי את זכות הבחירה — בתוך המרחב הכי מצומצם שקיים, גם שם עדיין יש לי את זכות הבחירה. הגורל שלנו באחריותנו.״
+          </blockquote>
+        </div>
+
+        <div>
+          <ul class="hero-stats" id="hero-stats" aria-label="נתוני המסלול"></ul>
+          <div class="hero-actions">
+            <a class="btn" href="#journey">התחלת המסע (13 תחנות) ↓</a>
+            <a class="btn btn-secondary" href="#questions">לשאלות הדיון ולסיכום</a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hero-map" aria-labelledby="map-title">
+        <div class="hero-map-header">
+          <span class="hero-map-title" id="map-title">מפת התחנות במסלול</span>
+          <span class="hero-map-progress" id="visited-counter">0 / 13 נפתחו</span>
+        </div>
+        <ol class="station-nav-list" id="station-nav-list"></ol>
+      </nav>
+    </section>
+
+    <details class="guide-panel" id="guide-panel">
+      <summary>
+        <span class="guide-summary-text">
+          <span class="guide-title">איך עובדים עם הדף במפגש או בחדר?</span>
+          <span class="guide-hint">לחצו לפתיחת הצעה לחלוקת זמן והנחיות עבודה</span>
+        </span>
+        <span class="chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="guide-body">
+        <ol class="guide-steps" aria-label="שלבי העבודה המומלצים">
+          <li>
+            <span class="guide-step-badge">שלב א׳ · קריאה וצפייה</span>
+            <strong>מפגש עם העדות</strong>
+            <p>עברו יחד על הקטעים לפי הסדר (או בחרו מוקדים מרכזיים מתוך 13 התחנות). כל כרטיסייה נפתחת בלחיצה כדי לשמור על מסך נקי וממוקד.</p>
+          </li>
+          <li>
+            <span class="guide-step-badge">שלב ב׳ · שיח משותף</span>
+            <strong>זיהוי כוחות ונקודות נגיעה</strong>
+            <p>התבוננו בשאלות הדיון בתחתית הדף: אילו תכונות וכוחות מתגלים באישיותו של אבינתן, ומה מתוכם פוגש אותנו בחיינו?</p>
+          </li>
+          <li>
+            <span class="guide-step-badge">שלב ג׳ · זיקוק למליאה</span>
+            <strong>איסוף תובנה לשיתוף</strong>
+            <p>כתבו בלוח הסיכום את עיקרי הדברים שעלו בקבוצה, והעתיקו בלחיצה אחת לצ׳אט של זום או לשמירה אישית.</p>
+          </li>
+        </ol>
+        <p class="care-note">העדות עוסקת בשבי, בידוד ממושך וגעגוע למשפחה, מתוך דגש על כוחות חיים, בחירה ותקווה. קחו נשימה והתקדמו בקצב שמתאים לכם.</p>
+      </div>
+    </details>
+
+    <section class="timeline-section" id="journey" aria-labelledby="journey-title">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">המסלול המלא · 1 עד 13</p>
+          <h2 class="section-title" id="journey-title">תחנות העדות: וידאו וקטעי מקור מהספר</h2>
+        </div>
+      </div>
+
+      <div class="toolbar" role="region" aria-label="סינון ותצוגת תחנות">
+        <div class="filter-group" role="group" aria-label="סינון לפי סוג תוכן">
+          <button class="filter-pill" type="button" data-filter="all" aria-pressed="true">הכול (13)</button>
+          <button class="filter-pill" type="button" data-filter="video" aria-pressed="false">🎬 קטעי וידאו (8)</button>
+          <button class="filter-pill" type="button" data-filter="book" aria-pressed="false">📖 קטעים מהספר (5)</button>
+        </div>
+
+        <div class="toolbar-actions">
+          <button class="btn btn-ghost btn-sm" type="button" id="expand-books">פתיחת כל קטעי הקריאה</button>
+          <button class="btn btn-ghost btn-sm" type="button" id="collapse-all">כיווץ הכול</button>
+        </div>
+        <span class="sr-only" id="filter-status" role="status"></span>
+      </div>
+
+      <div class="timeline-track" id="timeline-track"></div>
+    </section>
+
+    <section class="questions-section" id="questions" aria-labelledby="questions-title">
+      <p class="section-eyebrow">התבוננות, הפנמה ושיח</p>
+      <h2 class="section-title" id="questions-title">שאלות לדיון בעקבות הסיפור</h2>
+      <p class="questions-intro">
+        שתי השאלות הראשונות הן שאלות הליבה לדיון. לצידן מופיעות שלוש שאלות הרחבה להעמקה ברוח הדברים — ניתן לבחור מתוכן בהתאם לזמן ולאופי הקבוצה.
+      </p>
+      <ol class="questions-grid" id="questions-grid"></ol>
+    </section>
+
+    <section class="plenary-section" id="plenary" aria-labelledby="plenary-title">
+      <h2 id="plenary-title">לוח סיכום ותובנות לשיתוף</h2>
+      <p class="plenary-intro">
+        רכזו כאן את התכונות, הרגעים והתובנות שעלו בשיחה. הכל נשמר אוטומטית בדפדפן שלכם ומוכן להעתקה נקייה לצ׳אט של זום.
+      </p>
+
+      <div class="traits-bank" aria-label="תגיות כוחות ותכונות להשראה">
+        <span class="traits-bank-label">תכונות וכוחות שעולים מן המסע (לחיצה מוסיפה/מסמנת בסיכום):</span>
+        <div class="traits-chips" id="traits-chips"></div>
+      </div>
+
+      <div class="fields-grid" id="summary-fields">
+        <label class="field-label" for="field-strengths">
+          <span>1. תכונות וכוחות באישיותו של אבינתן</span>
+          <textarea id="field-strengths" placeholder="אילו כוחות נפש, ערכים ודפוסי התמודדות בלטו בעיניכם במיוחד?"></textarea>
+        </label>
+
+        <label class="field-label" for="field-touchpoint">
+          <span>2. נקודה שנגעה בנו ומה ניתן לאמץ</span>
+          <textarea id="field-touchpoint" placeholder="איזה רגע או משפט נגע בכם במיוחד, ואיזה כוח תרצו לאמץ לחייכם?"></textarea>
+        </label>
+
+        <label class="field-label" for="field-takeaway">
+          <span>3. תובנה לחיים, למשפחה ולמעשה החינוכי</span>
+          <textarea id="field-takeaway" placeholder="מה אנו לוקחים מהסיפור על שורשי הבית, מרחב הבחירה או הליווי שלנו את אחרים?"></textarea>
+        </label>
+      </div>
+
+      <div class="plenary-actions">
+        <div class="plenary-buttons">
+          <button class="btn btn-gold" type="button" id="copy-summary">📋 העתק סיכום לצ׳אט של זום</button>
+          <button class="btn btn-outline-light btn-sm" type="button" id="print-page">🖨️ הדפסה / PDF</button>
+          <button class="btn btn-outline-light btn-sm" type="button" id="clear-summary">ניקוי הלוח</button>
+        </div>
+        <p class="copy-feedback" id="copy-status" role="status"></p>
+      </div>
+
+      <textarea class="manual-copy" id="manual-copy" aria-label="תיבת סיכום להעתקה ידנית" readonly hidden></textarea>
+      <p class="storage-note" id="storage-note">הסיכום נשמר אוטומטית בדפדפן הזה.</p>
+    </section>
+
+    <noscript>
+      <p style="margin-block: 1.5rem; padding: 1rem; background: #fff3cd; border-radius: 0.5rem;">
+        כדי לצפות בקטעי הווידאו והקריאה האינטראקטיביים בדף זה, יש לאפשר הפעלת JavaScript בדפדפן.
+      </p>
+    </noscript>
+
+    <footer class="site-footer">
+      <span>מקורות · <strong>״מבעד לאדמה״</strong> מאת אבינתן אור · <strong>״עובדה״</strong>, ריאיון עם אילנה דיין</span>
+      <a class="back-to-top" href="#top">חזרה לראש הדף ↑</a>
+    </footer>
+  </main>
+
+  <script>
+    const WORKSHOP_DATA = {
+      storageKey: "avinatan-or-alternative-landing-v1",
+      visitedKey: "avinatan-or-alternative-visited-v1",
+      timerMinutes: 18,
+      traits: [
+        "חופש בחירה פנימי",
+        "כיבוד הורים ושורשיות",
+        "אמונה כנה ואותנטית",
+        "יוזמה ותושייה",
+        "סבלנות ואיפוק",
+        "משמעת עצמית יומיומית",
+        "הומור עצמי",
+        "חשיבה אנליטית והנדסית",
+        "סקרנות ולמידה מתמדת",
+        "גדלות נפש ויושרה",
+        "חיבור רגשי למשפחה",
+        "יכולת התפעלות מהחיים"
+      ],
+      questions: [
+        {
+          number: 1,
+          core: true,
+          tag: "שאלת ליבה",
+          title: "חשבו אילו תכונות וכוחות מתבטאים מהאישיות של אבינתן לאורך הסיפור.",
+          sub: "שימו לב גם לשילוב שבין כוחות משלימים: יוזמה נועזת לצד ״סבלנות״ ואיפוק, ריאליות הנדסית לצד שיחה חשופה עם אלוהים, ועוצמה מנטלית לצד געגוע ודמעות."
+        },
+        {
+          number: 2,
+          core: true,
+          tag: "שאלת ליבה",
+          title: "איזו נקודה מהסיפור ומהאישיות של אבינתן נגעה בכם במיוחד, ומה ניתן לאמץ מהכוחות שלו?",
+          sub: "בחרו רגע קונקרטי אחד — משפט, החלטה או הרגל בתוך התא — וחשבו כיצד ניתן לתרגם אותו למציאות היומיומית שלכם."
+        },
+        {
+          number: 3,
+          core: false,
+          tag: "שאלה להעמקה · שורשים ובית",
+          title: 'מה מלמד הסיפור על כוחם של הבית, ההורים והחינוך להפוך ל"קול פנימי מלווה" גם בבדידות מוחלטת?',
+          sub: 'מן השיחה על "כבד את אביך ואת אמך", דרך קבלת השבת ושיחות הדמיון בימי שישי, ועד הגאווה בהוריו שהלכו עם האמת שלהם — כיצד נבנים עוגנים כאלה בנפש האדם?'
+        },
+        {
+          number: 4,
+          core: false,
+          tag: "שאלה להעמקה · מרחב הבחירה",
+          title: "כיצד שגרה יומית תחומה ועקבית מצליחה לייצר חירות פנימית בתוך מציאות חסרת שליטה?",
+          sub: 'אימוני כושר מג׳ריקנים, שעה מדודה של קלקולוס בראש וחמש מילים חדשות בערבית מדי יום — איפה פוגשת אותנו התפיסה ש"הגורל שלנו באחריותנו" בתקופות של עומס, אי־ודאות או שחיקה?'
+        },
+        {
+          number: 5,
+          core: false,
+          wide: true,
+          tag: "שאלה להעמקה · מבט חינוכי ואישי",
+          title: 'אילו הרגלים, ערכים או "ארגז כלים פנימי" אנו יכולים לטפח היום בעצמנו ובדור הצעיר לקראת רגעי מבחן?',
+          sub: "לאור הדרך שבה אבינתן רתם כל תחנה בחייו כדי לשמור על צלם אנוש ועל אש פנימית בוערת — מה חשוב לנו לחזק בבית, בכיתה או בקהילה שלנו?"
+        }
+      ],
+      // 13 הפריטים מסודרים בדיוק לפי הרצף המבוקש (1 עד 13)
+      items: [
+        {
+          order: 1,
+          id: "station-01",
+          kind: "video",
+          when: "ראשית השבי · המפגש עם המנהרה",
+          theme: "ארגז כלים מהבית והומור עצמי",
+          title: "ממדי התא וארגז הכלים מהבית",
+          context: "אבינתן (1.97 מ׳) ממחיש בהומור את מגבלות התא הנמוך שבו לא יכול היה לעמוד זקוף, ומספר כיצד כל תחנות חייו חברו יחד להתמודדות בשבי.",
+          seconds: 69,
+          driveId: "1GYA0OoMKNiJg7Cmvp4znci1v2q32HfoT",
+          youtube: "https://www.youtube.com/watch?v=kYVvmV5PPNE"
+        },
+        {
+          order: 2,
+          id: "station-02",
+          kind: "book",
+          when: "היום ה־80 לשבי",
+          theme: "כיבוד הורים ואמונה כנה",
+          title: "כיבוד הורים · שיחה אחד על אחד עם אלוהים",
+          context: "לאחר שמונים ימי מלחמה ושבע שנים מאז שעזב את הדת, פונה אבינתן אל אלוהים בכנות גמורה וללא פילטרים — ומזכיר את הבטחת ״למען יאריכון ימיך על פני האדמה״.",
+          readMinutes: 2,
+          highlight: "״לא רק ׳יאריכון ימיך׳, אלא גם ׳על פני האדמה׳. לא מתחתיה. ככה הבטחת.״",
+          quote: `גדלתי במשפחה דתית. ילד שני מתוך שבעה. אח לשני אחים ולארבע אחיות. בית שאלוהים נוכח בו לא רק בקיום המצוות, אלא כזה בו האלוהים ליווה את היום־יום בהחלטות ובמעשים. הוא היה חלק מסדר היום שלנו. זו הפעם הראשונה לאחר שמונים ימים של מלחמה ושבע שנים שקדמו לה מאז שעזבתי את הדת, שעולה בתוכי התחושה הפנימית והצורך לדבר עם אלוהים. אחד על אחד. בלי פילטרים ובלי תפילות. פשוט ככה, לשפוך את מה שבפנים.
+
+"תראה," אני אומר לו, "אני יודע שהסיטואציה קצת מורכבת. הרבה זמן עבר מהפעם האחרונה שדיברנו. אני יודע שזה צבוע לדבר איתך רק עכשיו, כשאני צריך את עזרתך. נכון, לא שמרתי שבת ולא הקפדתי על קלה או על חמורה. ושנינו יודעים שסיכוי טוב שבעתיד אשכח אותך שוב. אבל שנינו גם יודעים שיש דבר אחד עליו תמיד הקפדתי, כבד את אביך ואת אמך.
+
+"כן אוקטובר לא אוקטובר, כן שמחת תורה לא שמחת תורה, את זה תמיד קיימתי. ועכשיו תורך לקיים את החלק שלך – 'למען יאריכון ימיך'.
+
+"ואני מזכיר, לא רק 'יאריכון ימיך', אלא גם 'על פני האדמה'. לא מתחתיה. ככה הבטחת."
+
+אני עוצם עיניים ונרדם. מקווה שהדרישה תתקבל, ולא משער לעצמי שדווקא כאן, בעוד כמה שעות, "עסקה עכשיו" תקבל ביטוי כל כך מוחשי.`
+        },
+        {
+          order: 3,
+          id: "station-03",
+          kind: "video",
+          when: "התא המרכזי · ראשית היוזמה",
+          theme: "יוזמה אקטיבית וחשיבה אנליטית",
+          title: "משב הרוח מעבר לקיר השקים",
+          context: "מתוך ההבנה ש״אין מאה אחוז הגנה ותמיד תהיה נקודת חולשה״, אבינתן מזהה תנועת אוויר מעבר לקיר התא ומחליט לעבור לפעולה.",
+          seconds: 77,
+          driveId: "1b6Op7UnjoqgScqWqu1fnGekkJBNrZlD7",
+          youtube: "https://www.youtube.com/watch?v=8VfnZqT34_E"
+        },
+        {
+          order: 4,
+          id: "station-04",
+          kind: "book",
+          when: "התא המרכזי · שגרה בבידוד",
+          theme: "משמעת גופנית ולקיחת יוזמה",
+          title: "כושר · תוכנית אימונים בתא וגילוי משב הרוח",
+          context: "בתוך תא צר ומבודד בונה לעצמו אבינתן משטר אימונים של שישה ימים בשבוע מג׳ריקנים, בקבוקים ומוט ברזל — ובמקביל סורק את קיר שקי החול ומגלה סירקולציה של אוויר.",
+          readMinutes: 2,
+          highlight: "״אם יש אוויר שמגיע אליי, אז אני יכול להגיע אליו.״",
+          quote: `אני מבין שסוף סוף צריך לעבוד ברצינות. ביסודיות. אני מחליט שהגיע הזמן לנקוט יוזמה. אני מתחיל בתוכנית אימונים סדורה שאמורה להחזיר לגוף שלי מה ששייך לו. שכיבות סמיכה, כפיפות בטן וסקואטים הם החלק הקל לביצוע ולא דורשים התארגנות מיוחדת. אני מוציא משק הזבל שלי שני ברזלים מעוגלים שאספתי ומחבר אותם לג'ריקנים. אלו יהיו המשקלים הכבדים שלי מעכשיו. בקבוקי השתן הם בגודל ליטר וחצי והם ישמשו לתרגילי כתפיים וידיים. ככה גם לגבי שקיות המים שאני מכין מהן משקולות, ואפילו התחלתי לעשות תרגילי מתח על מוט ברזל שהנחתי בין קורות העץ. ארבעה סטים של ארבע-עשרה חזרות כל פעם. שיא אישי חדש.
+
+אני מגדיר לעצמי שישה אימונים בשבוע ויום מנוחה אחד. כיוון שיש לי שתי חולצות קצרות, שני זוגות מכנסיים ושלושה זוגות תחתונים, אני שוטף את עצמי רק פעם בשבוע עם קצת מים מהג'ריקן ומחליף סט בגדי אימון לאחר המקלחת. כל סט ישמש אותי לשבוע שלם. את הריח בתא אין צורך לתאר.
+
+במקביל לאימונים הפיזיים, ההתלהבות לסרוק את התא על כל מרכיביו לא פוסקת, רק נוסף הצורך בזהירות יתרה. כך, בין חישוב משקלי האימונים להקשבה לקולות שעולים מקצה המנהרה, אני ממשיך לבחון את התא שלי ומסתובב לקיר האחורי שעשוי שקי חול. אני מביט בו ואומר לעצמי שקיר כזה כבר ראיתי.
+
+בימים הראשונים כשירדנו אל מתחת לאדמה ראיתי אותם מתארגנים, חופרים, עוברים מצד לצד וממנהרה למנהרה. אני יודע שחלק מצומתי המנהרות חסומים בשקי חול. ואם זו הייתה השיטה שם, זו בטח השיטה גם פה. אני מתקרב לקיר שעשוי שני טורים של שישה-עשר שקי חול ומשחיל את היד ביניהם. היד שלי נשלחת עמוק ככל הניתן בין השקים, שם מתגלה עוד קיר שקים ועוד אחד אחריו, ואז אני מרגיש משב רוח מלטף את קצות האצבעות שלי.
+
+זהו. נגמר. הראש מבין שמשב רוח אומר סירקולציה של אוויר וסירקולציה של אוויר אומרת שיש כניסה ויציאה. הלב יודע שהראש צודק. אם יש אוויר שמגיע אליי, אז אני יכול להגיע אליו.`
+        },
+        {
+          order: 5,
+          id: "station-05",
+          kind: "video",
+          when: "היום ה־222 · תחילת ניסיון הבריחה",
+          theme: "סבלנות, איפוק ווויסות עצמי",
+          title: "המילה ״סבלנות״ חרוטה מעל המזרן",
+          context: "הפסקת חשמל פתאומית בתחילת החפירה גורמת לאבינתן לעצור את הדחף להתקדם מהר, לחרוט ״סבלנות״ מול עיניו ולהקדיש שלושה שבועות לתצפיות שקטות.",
+          seconds: 95,
+          driveId: "1hITrNPto4zcPOahk1WziXlYu-xLyjG-9",
+          youtube: "https://www.youtube.com/watch?v=AWtjHesMgOc"
+        },
+        {
+          order: 6,
+          id: "station-06",
+          kind: "book",
+          when: "לקראת יום הבריחה",
+          theme: "קבלת שבת, משפחה ואחריות על הגורל",
+          title: "קבלת שבת בתא ומכתבי הפרידה למשפחה",
+          context: "רגע לפני היציאה לתוכנית הבריחה מתאר אבינתן את טקס קבלת השבת ושיחות סיכום השבוע שערך בדמיונו עם הוריו ואחיו, וכותב מכתב אחרון וצוואה מתוך ערכי הבית.",
+          readMinutes: 3,
+          highlight: "״להילחם עבור עצמי כדי לא לתת למישהו אחר להחליט על הגורל שלי... בדיוק כמו שגידלתם אותי.״",
+          quote: `הכל מוכן ליום הבריחה חוץ משני דברים אחרונים וחשובים. שני דברים אחרונים שאקח איתי ויהיו עליי לכל מקרה.
+
+לפני כמעט שנה, בפסח הראשון שלי בשבי כתבתי מכתב לאבא שלי. כמה שבועות לפני זה, בחג פורים, כתבתי מכתב לאמא שלי. עם שניהם דיברתי לא מעט במהלך השבי, אבל רק בימי שישי. זה לא היה הרגל, זה היה טקס ששמרתי ביני לבין עצמי וחשבתי שיהיה נכון לערב אותם בזה.
+
+כל יום שישי הייתי מסדר את התא ומכין את קופסת השימורים האיכותית ביותר ששמרתי בשק ומקבל את פני השבת בצורה הכי משפחתית שהייתי יכול להרשות לעצמי. התפללתי וערכתי קבלת שבת, אכלתי ושרתי שירי שבת שאהבתי מהילדות בבית והייתי מבקש מההורים שלי, כל אחד לפי התור, לשבת איתי לשיחת סיכום שבוע. אחרי השיחה איתם הייתי מזמין גם את האחים והאחיות שלי לשבת איתי. כל אחד בתורו, כל אחת בתורה. השיחות איתם היו משמעותיות, מקולפות מכל כיסוי, ונתנו לי המון כוחות לאורך התקופה. גם חברים וחברות מהעבר התארחו אצלי בתא, אבל השיחות עם ההורים והמשפחה פעלו בצורה אחרת, הוציאו ממני קוצים וכאבים בעדינות, המסו מחשבות טורדניות ונתנו לא מעט נחמה מתחת לפני האדמה.
+
+עכשיו, רגע לפני שאני מוציא את התוכנית שלי לפועל, אני מתיישב לכתוב מכתב אחד נוסף למשפחה. אני מספר קצת ממה שעבר עליי במנהרה. מפרט על העבודה שמצאתי לעצמי בחודשים האחרונים, על ההחלטה לנסות לברוח, על הידיעה שיש סיכוי שאמות תוך כדי ועל ההבנה שיש אנשים שנלחמים עבורי למעלה וגם להם יש סיכוי למות, סיכוי גבוה משלי. אז זה המינימום שאני יכול לעשות, להילחם עבור עצמי כדי לא לתת למישהו אחר להחליט על הגורל שלי או לקחת אחריות על החיים שלי מלבדי. בדיוק כמו שגידלתם אותי.
+
+אם אצליח ואם לא, זו תהיה מכה מוראלית לחמאס, וגם זו תרומה שאני יכול לתרום כרגע למלחמה. וחשוב מכול, אני מוסיף וכותב, נגמרו הימים בהם העם היהודי נותן למישהו אחר להכריע את העתיד שלו. אם לא אראה אתכם שוב, אל תשקעו בצער. אמשיך ללוות אתכם במחשבות, בזכרונות ואולי אפילו בדרכים שאנחנו לא יודעים עליהן. וגם אם לא, תחגגו ותשמחו על מה שזכינו להיות ועל איך שזכינו לעשות את זה ביחד בתקופת החיים.
+
+את המכתבים עטפתי בנייר כסף שלקחתי ממכסים של אריזות מזון. עטפתי אותם בצורה מהודקת וכיסיתי אותם במדבקות. המכתבים עדיין שמורים במצב מצוין כי הם קבורים טוב-טוב עשרה מטרים מתחת לאדמה בעזה. למכתבים האלה הוספתי דף אחד ובו צוואה.`
+        },
+        {
+          order: 7,
+          id: "station-07",
+          kind: "video",
+          when: "חודשי החפירה · אלתור תאורה",
+          theme: "תושייה הנדסית ונחישות",
+          title: "קילוף 15 מטר כבל בסכין גילוח",
+          context: "בידיים פצועות ובאמצעות סכין גילוח ישן ומדבקות מזון, אבינתן מאלתר תשתית תאורה במעמקי המנהרה ומסרב לחזור לתא עד להשלמת המשימה.",
+          seconds: 104,
+          driveId: "1eBcpPd8HdjNNndAGQJh6ycqIyPndpBiP",
+          youtube: "https://www.youtube.com/watch?v=Ji7r5GCJCdw"
+        },
+        {
+          order: 8,
+          id: "station-08",
+          kind: "video",
+          when: "מהיום ה־333 · החפירה האנכית",
+          theme: "ניצחון הרוח וחגיגת הישגים קטנים",
+          title: "״אין קצה ליכולת של האדם״ והאש מתחת לסבל",
+          context: "כשהרעב הכבד מתיש את הגוף עד קצה היכולת, העמידה הזקופה בתוך הפיר הופכת לחגיגה של ניצחון הרוח והאש הפנימית שבוערת מתחת לסבל.",
+          seconds: 130,
+          driveId: "1L64mu0Oi39zax0g8PItr501xHLKecQID",
+          youtube: "https://www.youtube.com/watch?v=lsE2qphH6TI"
+        },
+        {
+          order: 9,
+          id: "station-09",
+          kind: "book",
+          when: "כמעט 600 ימים בשבי · אזוק בתא",
+          theme: "חיבור רוחני להורים והתמודדות עם בדידות",
+          title: "חלום השודדים של אמא, סעודה שלישית והבדידות",
+          context: "קשור בתאו בתום קרוב לשש מאות ימים בשבי, נזכר אבינתן בחלום הבלהות החוזר של אמו ובמשפט היחיד שאמרה לו בגיוסו — ושולח להוריו כוחות ממעמקי האדמה.",
+          readMinutes: 3,
+          highlight: "״את סוף החלום אף פעם לא גילית... ואם הסוף לא קרה, אז הוא בידיים שלנו. הגורל שלנו באחריותנו.״",
+          quote: `מאז שאני זוכר את עצמי, אמא שלי מספרת על חלום אחד שלא עוזב אותה שחוזר אחת לכמה זמן ומעיר אותה בלילות. חלום בלהות. במשך יותר מעשרים שנה אמא הייתה מתארת לי בפרטי פרטים איך בלילה התגנבו אליה לחלומות חבורות של שודדים. הם תמיד מצליחים לגנוב לה דבר יקר. כל פעם סוג אחר של גנבה. פעם זו שרשרת יהלומים ופעם ארנק. פעם חפץ יקר ערך ופעם משהו סנטימנטלי. תמיד שודדים משהו יקר ותמיד מצליחים לצאת בלי פגע. אמא הייתה מתעוררת מהסיוט רגע אחרי הגניבה ואף פעם לא הייתה מצליחה למשוך עוד כמה דקות כדי לסגור מעגל בחלום ולקבל את הגניבה בחזרה או להבין מי השודדים ולמה דווקא היא.
+
+אין לי הסבר לזה. בדיוק כמו שאין לי הסבר לבקשה היחידה שלה ממני ביום הגיוס שלי לצבא. לא "תשמור על עצמך" לא "תסמוך על עצמך", לא "תיזהר" ולא "תהיה חבר טוב". רק דבר אחד אמרה לי רגע לפני שעליתי על מדים: "אני רק מבקשת שלא תיחטף."
+
+אני יושב קשור בתא, גנוב כמו חפץ יקר ערך שהיא חלמה שלקחו ממנה וחטוף כמו שביקשה שלא יקרה, ואומר לעצמי שזה לא הגיוני, זה פשוט לא הגיוני. אני לא מאמין בכוחות של היקום או שהכול כתוב לנו מראש. אני אדם ריאלי. פרקטי. צירופי מקרים, נסיבתיות והגיון מנהלים את חיי תמיד. אבל מה לעזאזל קורה פה? ולמה עכשיו הכול צף ועולה? למה כמעט שש מאות ימים לתוך השבי ועכשיו הפלונטר של החלומות מתווסף למנהרה?
+
+אין לי תשובה לזה. אני מתיישב, נשען על הקיר ומתחיל לדבר אל אמא שלי. אני חי, תרגישי אותי. אל תדאגי. נכון, שדדו אותך. אבל את סוף החלום אף פעם לא גילית, אף פעם לא ידענו איך זה נגמר. ואם הסוף לא קרה, אז הוא בידיים שלנו. הגורל שלנו באחריותנו. אבא, תדע גם אתה, אני חי. אני בריא וחזק. גם מכאן, מתחת לאדמה, אני שולח אליכם כוח ועוצמות. תרגישו ותדעו שהאנרגיה שאתם מרגישים מגיעה ממני. תדעו שזו הרגשה אמיתית ותדעו שזה אני.
+
+אני יושב שם איתם, כל המשפחה סביבי. זה זמן סעודה שלישית ואני שר יחד איתם, "מִנְעִי קוֹלֵךְ מִבֶּכִי וְעֵינַיִךְ מִדִּמְעָה, כִּי יֵשׁ שָׂכָר לִפְעֻלָּתֵךְ נְאֻם ה', וְשָׁבוּ מֵאֶרֶץ אוֹיֵב, וְיֵשׁ תִּקְוָה לְאַחֲרִיתֵךְ נְאֻם ה' וְשָׁבוּ בָנִים לִגְבוּלָם." המילים נשברות בי. אלו רגעים שמפרקים אותי מבפנים והדמעות מנקות הכול החוצה. אני מבקש מהם להתפלל גם עבורי, להישאר ביחד, לתמוך ולהיות אחד עבור השני. אני לא יודע אם הם הרגישו אותי. אבל רציתי להרגיש שהם מרגישים, וזה היה מספיק בשבילי.
+
+הבדידות נוראית. אפילו בתא הנוכחי, הצמוד למגורי השומרים והקרוב לחיי השגרה במנהרה, הלבד הוא נוראי ותמידי. יום ביומו, שבוע אחרי שבוע וחודש אחרי חודש, אני פשוט לבד בתא ובעולם. שום קשר ותקשורת עם יצור חי. פעמיים ביום מגיע לתא אחד השומרים עם מנת אוכל. אם אבו-חסן לא בסביבה ואם התמזל מזלי, השומר נשאר למשך דקות מעטות ואני זוכה לקשר כלשהו עם בן-אדם אחר. עם מישהו חיצוני למחשבות שלי.`
+        },
+        {
+          order: 10,
+          id: "station-10",
+          kind: "video",
+          when: "פיר החפירה · לקראת פני הקרקע",
+          theme: "זכות הבחירה הפנימית ובעירת החיים",
+          title: "״אני מסניף חיים״ · שורש העץ וזכות הבחירה",
+          context: "כשהוא פוגע בשורש של עץ מתחת לאדמה ומריח לראשונה דבר חי, מנסח אבינתן את לב תפיסתו: גם במרחב המצומצם ביותר נותרת לאדם זכות הבחירה.",
+          seconds: 111,
+          driveId: "1SjGiJ3wwur61FEUY7QJiabD1cSJWVZ5Z"
+        },
+        {
+          order: 11,
+          id: "station-11",
+          kind: "video",
+          when: "לאחר השחרור · המפגש עם ההורים",
+          theme: "גדלות נפש, יושרה וכבוד להורים",
+          title: "השיחה עם ההורים אחרי השחרור · ״ללכת עם האמת שלו״",
+          context: "במפגש עם הוריו לאחר שובו מהשבי הם שואלים אם הוא כועס על העמדה שהביעו, ואבינתן משיב להם שהוא גאה בהם על שנשארו נאמנים לאמת שלהם.",
+          seconds: 85,
+          driveId: "11976tEGHQwehj2jTwYI4gYf0zOzi-HOP"
+        },
+        {
+          order: 12,
+          id: "station-12",
+          kind: "video",
+          when: "היום ה־407 · סמוך לפני הקרקע",
+          theme: "פליאה, נוכחות והערכה לפשטות החיים",
+          title: "היום ה־407 · אוויר נקי, העורב והילדה עם התיק",
+          context: "דרך פתח קטנטן חודרים לראשונה אוויר נקי וקולות יומיומיים מהרחוב — רוח על הפנים, קריאת עורב וילדה הולכת עם ילקוט שממלאים אותו התרגשות.",
+          seconds: 113,
+          driveId: "126_DVfGjiP4ByRMl5oZ4B2vaMBzH7m8g"
+        },
+        {
+          order: 13,
+          id: "station-13",
+          kind: "book",
+          when: "מעל היום ה־600 · אזוק בתא הבטון",
+          theme: "חוסן קוגניטיבי, למידה ומשמעת עצמית",
+          title: "מתמטיקה · קלקולוס בראש וחמש מילים בערבית ביום",
+          context: "אזוק בבידוד ללא דף וכלי כתיבה, אבינתן מתעקש לקבל ספר מתמטיקה ומילון ערבית־אנגלית, מקציב לעצמו שעה ביום ופותר משוואות בראש כדי לשמור על חדות הרוח ועל הזמן.",
+          readMinutes: 2,
+          highlight: "״אין לי דפים וכלי כתיבה אז את התרגילים אני פותר בראש וזוכר את כל הפתרונות והנעלמים במשוואות.״",
+          quote: `"איזה ספר אתה רוצה?" הוא שואל אותי.
+
+"ספר מתמטיקה," אני עונה, "כולל אלגברה למתקדמים," אני מפרט בפניו. "אני רוצה ספר שנקרא קלקולוס."
+
+"כן כן אני מכיר, של המהנדסים. מלומד היהוד הזה." לאחר שלושים ימים הוא מביא לי את הספר. אני מזהה אותו משנה א' באוניברסיטה ואני יודע שזה חלק ראשון מתוך שלושה. אני פונה לאבו-חסן מתוך כוונה גם לבקש את שני הכרכים הנותרים והוא מקדים אותי ואומר: "תירגע, תסיים את זה ונדבר."
+
+אני מגביל את עצמי לשעה אחת של מתמטיקה ביום כדי לא לסיים את הספר מהר מדי. אין לי דפים וכלי כתיבה אז את התרגילים אני פותר בראש וזוכר את כל הפתרונות והנעלמים במשוואות. אחרי שביקשתי אינספור פעמים, באחד הימים הם נענים לבקשתי ומביאים לי מילון ערבית־אנגלית.
+
+זו כבר באמת מתנה שלא מפסיקה לתת. אני יושב שעות ולומד ערבית. כל מילה וכל הטיה, כל פועל וכל ניב. מקפיד כל יום להגדיל את אוצר המילים שלי כדי שהשפה תשמש אותי טוב יותר וכדי שהזמן יעבור מהר יותר. כל יום חמש מילים חדשות מצטרפות ללקסיקון שלי.`
+        }
+      ]
+    };
+
+    const byId = (id) => document.getElementById(id);
+    const mediaLabels = {
+      video: "🎬 קטע וידאו מתוך ״עובדה״",
+      book: "📖 מתוך הספר ״מבעד לאדמה״"
+    };
+
+    let activeVideoCard = null;
+    const visitedIds = new Set();
+
+    function createEl(tag, className = "", text = "") {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text) node.textContent = text;
+      return node;
+    }
+
+    function padTwo(num) {
+      return String(num).padStart(2, "0");
+    }
+
+    function formatClock(totalSeconds) {
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      return `${padTwo(minutes)}:${padTwo(seconds)}`;
+    }
+
+    function externalLink(label, url, className) {
+      const link = createEl("a", className, label);
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      return link;
+    }
+
+    function loadVisited() {
+      try {
+        const raw = sessionStorage.getItem(WORKSHOP_DATA.visitedKey);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) parsed.forEach((id) => visitedIds.add(id));
+        }
+      } catch {
+        // Ignore storage restrictions
+      }
+    }
+
+    function markVisited(itemId) {
+      if (visitedIds.has(itemId)) return;
+      visitedIds.add(itemId);
+      const navLink = document.querySelector(`.station-nav-link[data-target="${itemId}"]`);
+      if (navLink) navLink.dataset.visited = "true";
+      byId("visited-counter").textContent = `${visitedIds.size} / ${WORKSHOP_DATA.items.length} נפתחו`;
+      try {
+        sessionStorage.setItem(WORKSHOP_DATA.visitedKey, JSON.stringify([...visitedIds]));
+      } catch {
+        // Ignore storage restrictions
+      }
+    }
+
+    function renderHeroStatsAndMap() {
+      const items = WORKSHOP_DATA.items;
+      const videos = items.filter((item) => item.kind === "video");
+      const books = items.filter((item) => item.kind === "book");
+      const totalWatchSeconds = videos.reduce((acc, v) => acc + v.seconds, 0);
+
+      const statsList = byId("hero-stats");
+      const statEntries = [
+        { strong: `${items.length}`, rest: "תחנות ערוכות לפי הרצף" },
+        { strong: `${videos.length} סרטונים`, rest: `(${formatClock(totalWatchSeconds)} דק׳ סה״כ)` },
+        { strong: `${books.length} קטעי קריאה`, rest: "מתוך ״מבעד לאדמה״" }
+      ];
+
+      for (const entry of statEntries) {
+        const li = createEl("li");
+        li.append(createEl("strong", "", entry.strong), createEl("span", "", entry.rest));
+        statsList.append(li);
+      }
+
+      const navList = byId("station-nav-list");
+      for (const item of items) {
+        const li = createEl("li");
+        const link = createEl("a", "station-nav-link");
+        link.href = `#${item.id}`;
+        link.dataset.target = item.id;
+        if (visitedIds.has(item.id)) link.dataset.visited = "true";
+
+        const num = createEl("span", "station-nav-num", padTwo(item.order));
+        const icon = createEl("span", "station-nav-icon", item.kind === "video" ? "🎬" : "📖");
+        icon.setAttribute("aria-hidden", "true");
+        const label = createEl("span", "station-nav-label", item.title);
+        const check = createEl("span", "station-nav-check");
+        check.setAttribute("aria-hidden", "true");
+
+        link.append(num, icon, label, check);
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          openAndScrollToStation(item.id);
+        });
+        li.append(link);
+        navList.append(li);
+      }
+
+      byId("visited-counter").textContent = `${visitedIds.size} / ${items.length} נפתחו`;
+    }
+
+    function openAndScrollToStation(stationId) {
+      const wrapper = byId(stationId);
+      if (!wrapper) return;
+      if (wrapper.hidden) {
+        const allBtn = document.querySelector('.filter-pill[data-filter="all"]');
+        if (allBtn) allBtn.click();
+      }
+      const card = wrapper.querySelector(".station-card");
+      if (card && !card.open) card.open = true;
+      wrapper.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function buildVideoBody(card, item, body) {
+      const stage = createEl("div", "video-stage");
+      const player = createEl("div", "player-frame");
+      const driveBase = `https://drive.google.com/file/d/${item.driveId}`;
+
+      const actions = createEl("div", "video-actions");
+      const links = createEl("div", "video-links");
+      links.append(externalLink("↗ פתיחה בחלון חדש (Drive)", `${driveBase}/view`, "btn btn-secondary btn-sm"));
+      if (item.youtube) {
+        links.append(externalLink("▶ גיבוי לצפייה ביוטיוב", item.youtube, "yt-backup"));
+      }
+      actions.append(links);
+      stage.append(player, actions);
+      body.append(stage);
+
+      card.addEventListener("toggle", () => {
+        if (!card.open) {
+          player.replaceChildren();
+          if (activeVideoCard === card) activeVideoCard = null;
+          return;
+        }
+
+        markVisited(item.id);
+
+        if (activeVideoCard && activeVideoCard !== card) {
+          activeVideoCard.open = false;
+        }
+        activeVideoCard = card;
+
+        if (player.querySelector("iframe")) return;
+
+        const loader = createEl("div", "player-loading");
+        loader.append(createEl("span", "spinner"), createEl("span", "", "טוען נגן וידאו..."));
+
+        const iframe = createEl("iframe");
+        iframe.title = item.title;
+        iframe.loading = "lazy";
+        iframe.allow = "autoplay; fullscreen";
+        iframe.src = `${driveBase}/preview`;
+
+        player.append(loader, iframe);
+      });
+    }
+
+    function buildBookBody(card, item, body) {
+      const sheet = createEl("div", "book-sheet");
+      const quote = createEl("blockquote", "book-quote");
+      const paragraphs = item.quote.split("\n\n").map((para) => createEl("p", "", para.trim()));
+      quote.append(...paragraphs);
+      sheet.append(quote);
+
+      if (item.highlight) {
+        const pull = createEl("div", "book-pullquote");
+        pull.append(createEl("span", "", item.highlight));
+        sheet.append(pull);
+      }
+
+      body.append(sheet);
+
+      card.addEventListener("toggle", () => {
+        if (card.open) markVisited(item.id);
+      });
+    }
+
+    function renderStationItem(item, nextItem) {
+      const wrapper = createEl("article", "timeline-item");
+      wrapper.id = item.id;
+      wrapper.dataset.kind = item.kind;
+
+      const marker = createEl("span", "timeline-marker", padTwo(item.order));
+      marker.setAttribute("aria-hidden", "true");
+
+      const card = createEl("details", "station-card");
+      card.dataset.kind = item.kind;
+
+      const summary = createEl("summary");
+      const main = createEl("div", "card-header-main");
+
+      const badges = createEl("div", "card-badges");
+      badges.append(
+        createEl("span", "badge-media", mediaLabels[item.kind]),
+        createEl("span", "badge-when", `תחנה ${item.order} · ${item.when}`),
+        createEl("span", "badge-theme", item.theme)
+      );
+
+      if (item.kind === "video") {
+        const dur = createEl("bdi", "badge-duration", formatClock(item.seconds));
+        dur.dir = "ltr";
+        badges.append(dur);
+      } else if (item.readMinutes) {
+        badges.append(createEl("span", "badge-duration", `כ־${item.readMinutes} דק׳ קריאה`));
+      }
+
+      const title = createEl("h3", "card-title", item.title);
+      const context = createEl("p", "card-context", item.context);
+      main.append(badges, title, context);
+
+      const togglePill = createEl("span", "card-toggle-pill");
+      togglePill.setAttribute("aria-hidden", "true");
+      const toggleLabel = createEl("span", "card-toggle-label");
+      const chevron = createEl("span", "chevron");
+      togglePill.append(toggleLabel, chevron);
+
+      summary.append(main, togglePill);
+
+      const body = createEl("div", "card-body");
+      if (item.kind === "video") {
+        buildVideoBody(card, item, body);
+      } else {
+        buildBookBody(card, item, body);
+      }
+
+      const footerNav = createEl("div", "card-footer-nav");
+      if (nextItem) {
+        const nextBtn = createEl("button", "next-station-btn", `לתחנה הבאה (${padTwo(nextItem.order)}: ${nextItem.title}) ←`);
+        nextBtn.type = "button";
+        nextBtn.addEventListener("click", () => openAndScrollToStation(nextItem.id));
+        footerNav.append(nextBtn);
+      } else {
+        const toQuestions = createEl("a", "next-station-btn", "סיום המסלול · מעבר לשאלות הדיון ↓");
+        toQuestions.href = "#questions";
+        footerNav.append(toQuestions);
+      }
+      body.append(footerNav);
+
+      card.append(summary, body);
+      wrapper.append(marker, card);
+      return wrapper;
+    }
+
+    function renderTimeline() {
+      const track = byId("timeline-track");
+      const items = WORKSHOP_DATA.items;
+      const rendered = items.map((item, idx) => renderStationItem(item, items[idx + 1] || null));
+      track.append(...rendered);
+
+      const filterButtons = [...document.querySelectorAll(".filter-pill[data-filter]")];
+      for (const btn of filterButtons) {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+          let count = 0;
+          for (const node of rendered) {
+            const matches = filter === "all" || node.dataset.kind === filter;
+            node.hidden = !matches;
+            if (!matches && node.dataset.kind === "video") {
+              const c = node.querySelector(".station-card");
+              if (c) c.open = false;
+            }
+            if (matches) count++;
+          }
+          for (const b of filterButtons) {
+            b.setAttribute("aria-pressed", String(b === btn));
+          }
+          byId("filter-status").textContent = `מוצגות ${count} תחנות.`;
+        });
+      }
+
+      byId("expand-books").addEventListener("click", () => {
+        for (const node of rendered) {
+          if (!node.hidden && node.dataset.kind === "book") {
+            node.querySelector(".station-card").open = true;
+          }
+        }
+      });
+
+      byId("collapse-all").addEventListener("click", () => {
+        for (const node of rendered) {
+          node.querySelector(".station-card").open = false;
+        }
+      });
+    }
+
+    function renderQuestions() {
+      const grid = byId("questions-grid");
+      for (const q of WORKSHOP_DATA.questions) {
+        const li = createEl("li", "question-card");
+        if (q.core) li.classList.add("is-core");
+        if (q.wide) li.classList.add("is-wide");
+
+        const top = createEl("div", "question-top");
+        top.append(
+          createEl("span", "question-number", String(q.number)),
+          createEl("span", "question-tag", q.tag)
+        );
+
+        const title = createEl("h3", "question-title", q.title);
+        const sub = createEl("p", "question-sub", q.sub);
+        li.append(top, title, sub);
+        grid.append(li);
+      }
+    }
+
+    function setupTimer() {
+      const timer = byId("timer");
+      const toggle = byId("timer-toggle");
+      const reset = byId("timer-reset");
+      const label = byId("timer-label");
+      const readout = byId("timer-readout");
+      const announcement = byId("timer-status");
+      const minutes = WORKSHOP_DATA.timerMinutes;
+      const totalMs = minutes * 60 * 1000;
+      let remaining = totalMs;
+      let deadline = 0;
+      let intervalId = null;
+
+      function updateUI(state) {
+        timer.dataset.state = state;
+        readout.hidden = state === "idle";
+        reset.hidden = state === "idle";
+        readout.textContent = formatClock(Math.ceil(remaining / 1000));
+        label.textContent = {
+          idle: `טיימר ${minutes} דק׳`,
+          running: "השהיה",
+          paused: "המשך",
+          done: "סיום · הפעלה מחדש"
+        }[state];
+      }
+
+      function tick() {
+        remaining = Math.max(0, deadline - Date.now());
+        readout.textContent = formatClock(Math.ceil(remaining / 1000));
+        if (remaining === 0) {
+          clearInterval(intervalId);
+          updateUI("done");
+          announcement.textContent = `הסתיימו ${minutes} דקות העבודה.`;
+        }
+      }
+
+      toggle.addEventListener("click", () => {
+        if (timer.dataset.state === "running") {
+          tick();
+          clearInterval(intervalId);
+          if (remaining > 0) updateUI("paused");
+          return;
+        }
+        if (remaining === 0) remaining = totalMs;
+        deadline = Date.now() + remaining;
+        announcement.textContent = "";
+        updateUI("running");
+        intervalId = setInterval(tick, 250);
+      });
+
+      reset.addEventListener("click", () => {
+        clearInterval(intervalId);
+        remaining = totalMs;
+        announcement.textContent = "";
+        updateUI("idle");
+        toggle.focus();
+      });
+
+      updateUI("idle");
+    }
+
+    function setupFontToggle() {
+      const btn = byId("font-toggle");
+      btn.addEventListener("click", () => {
+        const isLarge = document.documentElement.dataset.fontScale === "large";
+        if (isLarge) {
+          delete document.documentElement.dataset.fontScale;
+          btn.setAttribute("aria-pressed", "false");
+        } else {
+          document.documentElement.dataset.fontScale = "large";
+          btn.setAttribute("aria-pressed", "true");
+        }
+      });
+    }
+
+    function setupScrollProgress() {
+      const bar = byId("scroll-progress-bar");
+      function updateScroll() {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - doc.clientHeight;
+        const pct = max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0;
+        bar.style.width = `${pct}%`;
+      }
+      window.addEventListener("scroll", updateScroll, { passive: true });
+      updateScroll();
+    }
+
+    async function copyToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch {
+          // Fallback below
+        }
+      }
+
+      const prevFocus = document.activeElement;
+      const helper = createEl("textarea", "clipboard-helper");
+      helper.value = text;
+      helper.readOnly = true;
+      helper.tabIndex = -1;
+      document.body.append(helper);
+      helper.select();
+      helper.setSelectionRange(0, text.length);
+      try {
+        return document.execCommand("copy");
+      } catch {
+        return false;
+      } finally {
+        helper.remove();
+        prevFocus?.focus({ preventScroll: true });
+      }
+    }
+
+    function setupPlenary() {
+      const chipsWrap = byId("traits-chips");
+      const selectedTraits = new Set();
+      const fields = [...byId("summary-fields").querySelectorAll("textarea")];
+      const strengthsField = byId("field-strengths");
+      const status = byId("copy-status");
+      const manual = byId("manual-copy");
+      const storageNote = byId("storage-note");
+      const key = WORKSHOP_DATA.storageKey;
+
+      function saveState() {
+        status.textContent = "";
+        manual.hidden = true;
+        try {
+          const payload = {
+            fields: Object.fromEntries(fields.map((f) => [f.id, f.value])),
+            traits: [...selectedTraits]
+          };
+          localStorage.setItem(key, JSON.stringify(payload));
+          storageNote.textContent = "הסיכום נשמר אוטומטית בדפדפן הזה.";
+        } catch {
+          storageNote.textContent = "השמירה האוטומטית אינה זמינה במצב גלישה זה — מומלץ להעתיק את הסיכום לפני סגירת הדף.";
+        }
+      }
+
+      try {
+        const savedRaw = localStorage.getItem(key);
+        if (savedRaw) {
+          const saved = JSON.parse(savedRaw);
+          if (saved?.fields) {
+            for (const f of fields) {
+              if (typeof saved.fields[f.id] === "string") f.value = saved.fields[f.id];
+            }
+          }
+          if (Array.isArray(saved?.traits)) {
+            saved.traits.forEach((t) => selectedTraits.add(t));
+          }
+        }
+      } catch {
+        // Ignore storage read issues
+      }
+
+      for (const trait of WORKSHOP_DATA.traits) {
+        const chip = createEl("button", "trait-chip", trait);
+        chip.type = "button";
+        chip.dataset.selected = String(selectedTraits.has(trait));
+        chip.addEventListener("click", () => {
+          if (selectedTraits.has(trait)) {
+            selectedTraits.delete(trait);
+            chip.dataset.selected = "false";
+          } else {
+            selectedTraits.add(trait);
+            chip.dataset.selected = "true";
+            if (!strengthsField.value.includes(trait)) {
+              strengthsField.value = strengthsField.value.trim()
+                ? `${strengthsField.value.trim()} · ${trait}`
+                : trait;
+            }
+          }
+          saveState();
+        });
+        chipsWrap.append(chip);
+      }
+
+      byId("summary-fields").addEventListener("input", saveState);
+
+      byId("copy-summary").addEventListener("click", async () => {
+        status.textContent = "";
+        manual.hidden = true;
+
+        const sections = fields
+          .filter((f) => f.value.trim())
+          .map((f) => {
+            const label = f.labels[0].querySelector("span").textContent;
+            return `▪ ${label}\n${f.value.trim()}`;
+          });
+
+        if (!sections.length && !selectedTraits.size) {
+          status.textContent = "כתבו או סמנו לפחות נקודה אחת לפני ההעתקה.";
+          return;
+        }
+
+        const lines = ["אבינתן אור · מבעד לאדמה — סיכום ותובנות מהדיון"];
+        if (selectedTraits.size && !strengthsField.value.trim()) {
+          lines.push(`▪ כוחות בולטים: ${[...selectedTraits].join(" · ")}`);
+        }
+        lines.push(...sections);
+
+        const formatted = lines.join("\n\n");
+        if (await copyToClipboard(formatted)) {
+          status.textContent = "✓ הסיכום הועתק! ניתן להדביק בצ׳אט של זום.";
+        } else {
+          status.textContent = "ניתן להעתיק ידנית מהתיבה שנפתחה למטה.";
+          manual.value = formatted;
+          manual.hidden = false;
+          manual.focus();
+          manual.select();
+        }
+      });
+
+      byId("print-page").addEventListener("click", () => {
+        window.print();
+      });
+
+      byId("clear-summary").addEventListener("click", () => {
+        const hasContent = fields.some((f) => f.value.trim()) || selectedTraits.size > 0;
+        if (!hasContent) return;
+        if (!window.confirm("האם לנקות את כל הערות הסיכום מהלוח?")) return;
+        for (const f of fields) f.value = "";
+        selectedTraits.clear();
+        for (const chip of chipsWrap.querySelectorAll(".trait-chip")) {
+          chip.dataset.selected = "false";
+        }
+        saveState();
+        status.textContent = "הלוח נוקה.";
+      });
+    }
+
+    loadVisited();
+    renderHeroStatsAndMap();
+    renderTimeline();
+    renderQuestions();
+    setupTimer();
+    setupFontToggle();
+    setupScrollProgress();
+    setupPlenary();
+  </script>
+</body>
+</html>
